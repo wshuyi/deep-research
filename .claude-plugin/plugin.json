@@ -1,0 +1,21 @@
+{
+  "name": "deep-research",
+  "version": "1.6.0",
+  "description": "Deep Research Methodology (8-step method): Transform vague topics into high-quality research reports with systematic fact extraction, framework comparison, and verifiable conclusions.",
+  "author": {
+    "name": "wshuyi"
+  },
+  "repository": "https://github.com/wshuyi/deep-research",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "analysis",
+    "methodology",
+    "comparison",
+    "report",
+    "fact-checking",
+    "claude-code",
+    "skill"
+  ],
+  "platforms": ["macos", "linux", "windows"]
+}
