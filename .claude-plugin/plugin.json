@@ -1,7 +1,7 @@
 {
   "name": "deep-research",
-  "version": "1.6.0",
-  "description": "Deep Research Methodology (8-step method): Transform vague topics into high-quality research reports with systematic fact extraction, framework comparison, and verifiable conclusions.",
+  "version": "2.1.0",
+  "description": "Deep Research Methodology (8-step method): Transform vague topics into high-quality research reports with systematic fact extraction, framework comparison, independent Agent verification, and verifiable conclusions.",
   "author": {
     "name": "wshuyi"
   },

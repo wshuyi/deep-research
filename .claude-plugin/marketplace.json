@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Deep Research Methodology - Transform vague topics into high-quality research reports",
-    "version": "1.0.0"
+    "version": "2.1.0"
   },
   "plugins": [
     {
       "name": "deep-research",
-      "description": "8-step research methodology for systematic analysis, fact extraction, and verifiable conclusions",
-      "version": "1.6.0",
+      "description": "8-step research methodology with independent Agent verification for systematic analysis, fact extraction, and verifiable conclusions",
+      "version": "2.1.0",
       "author": {
         "name": "wshuyi"
       },

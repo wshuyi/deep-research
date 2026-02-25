@@ -2,7 +2,7 @@
 
 [中文文档](README_CN.md)
 
-A Claude Code Skill that transforms vague topics into high-quality, deliverable research reports using a systematic 8-step methodology.
+A Claude Code Skill that transforms vague topics into high-quality, deliverable research reports using a systematic 8-step methodology with independent verification.
 
 ## The Problem
 
@@ -12,6 +12,7 @@ When researching complex topics, you often face:
 - **Fuzzy conclusions**: "I feel like X" instead of evidence-based reasoning
 - **Missing traceability**: Can't verify where conclusions came from
 - **Time-sensitivity blindness**: Using outdated information in fast-moving fields like AI
+- **Unverified claims**: No independent check before publishing conclusions
 
 Traditional research is time-consuming, and conclusions are often unreliable.
 
@@ -22,6 +23,7 @@ Deep Research provides a **systematic 8-step methodology** that:
 - **Tiered source evaluation**: L1 (official docs) > L2 (blogs) > L3 (media) > L4 (community)
 - **Fact cards with citations**: Every claim traceable to its source
 - **Time-sensitivity assessment**: Automatic handling of fast-changing fields
+- **Independent Agent verification**: Separate Agent validates facts and logic before final report (Step 6.5)
 - **Verifiable conclusions**: "Fact → Comparison → Conclusion" explicit chains
 - **Deliverable output**: Boss-readable reports with one-line summaries
 
@@ -62,16 +64,17 @@ Natural language triggers:
 ## Workflow (8 Steps)
 
 ```
-Step 0: Problem type identification
+Step 0:   Problem type identification
 Step 0.5: Time-sensitivity assessment (BLOCKING for AI/tech topics)
-Step 1: Problem decomposition & boundary definition
-Step 2: Source tiering & authority locking
-Step 3: Fact extraction & evidence cards
-Step 4: Build comparison framework
-Step 5: Reference alignment
-Step 6: Fact → Conclusion derivation chain
-Step 7: Use case validation (sanity check)
-Step 8: Deliverable formatting
+Step 1:   Problem decomposition & boundary definition
+Step 2:   Source tiering & authority locking
+Step 3:   Fact extraction & evidence cards
+Step 4:   Build comparison framework
+Step 5:   Reference alignment
+Step 6:   Fact → Conclusion derivation chain
+Step 6.5: Independent Agent verification (BLOCKING) ← NEW in v2.1
+Step 7:   Use case validation (sanity check)
+Step 8:   Deliverable formatting
 ```
 
 ## Output Structure
@@ -83,6 +86,7 @@ Step 8: Deliverable formatting
 ├── 02_事实卡片.md          # Fact cards
 ├── 03_对比框架.md          # Comparison framework
 ├── 04_推导过程.md          # Derivation process
+├── 05.5_校验记录.md        # Independent Agent verification records (NEW)
 ├── 05_验证记录.md          # Validation records
 └── FINAL_调研报告.md       # Final deliverable
 ```
@@ -107,14 +111,16 @@ Claude: [Executes 8-step methodology]
 | **Source Tiering** | L1-L4 hierarchy ensures conclusion traceability |
 | **Time-sensitivity** | Auto-detects fast-moving fields (AI, crypto, etc.) |
 | **Fact Cards** | Every claim has source, confidence level, applicability |
+| **Independent Verification** | Separate Agent validates facts & logic before final report |
 | **Explicit Derivation** | No "I feel like" - only mechanism-based conclusions |
+| **Quality Checklists** | Boundary guard, scope creep prevention, risk-level distinction |
 | **Deliverable Output** | One-line summary + structured chapters + citations |
 
 ## FAQ
 
 **Q: How is this different from just asking Claude to research something?**
 
-A: This skill enforces a systematic methodology with intermediate artifacts, source verification, and explicit reasoning chains. Results are traceable and verifiable.
+A: This skill enforces a systematic methodology with intermediate artifacts, source verification, independent Agent verification (Step 6.5), and explicit reasoning chains. Results are traceable and verifiable.
 
 **Q: Does it work for non-technical topics?**
 
@@ -123,6 +129,10 @@ A: Yes, the methodology applies to any research topic. The 5 problem types (conc
 **Q: How does it handle outdated information?**
 
 A: Step 0.5 assesses time-sensitivity. For high-sensitivity fields (AI, blockchain), it enforces 6-month time windows and requires version number citations.
+
+**Q: What is Independent Agent Verification (Step 6.5)?**
+
+A: Before writing the final report, a separate Agent independently validates the fact cards and derivation logic. This catches data inaccuracies, logical jumps, and missing dimensions that the researcher might overlook.
 
 ## License
 
